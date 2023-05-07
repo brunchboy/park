@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="title">Admin</h1>
+<h2 class="subtitle">Configure and Administer Park.</h2>
+
+<div class="content">
+  <ul>
+    <li>
+      <a class="button is-link vertical-middle" href="admin/users">
+        {{users|count}} User{{user|pluralize}}
+      </a>
+    </li>
+  </ul>
+</div>
+{% endblock %}
