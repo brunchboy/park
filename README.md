@@ -1,7 +1,5 @@
 # Park
 
- <image align="right" width="585" height="1066"
- src="doc/assets/Room.PNG">
 A web application for allowing sharing of parking spaces by
 residents of a building.
 
