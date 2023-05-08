@@ -50,9 +50,15 @@ DELETE FROM users_spaces
    AND space = :space;
 
 
+-- :name create-section! :! :n
+-- :doc creates a new garage section record
+INSERT INTO sections (id, name)
+VALUES (gen_random_uuid(), :name);
+
+
 -- :name create-space! :! :n
 -- :doc creates a new parking space record
-INSERT INTO rooms (id, name, section)
+INSERT INTO spaces (id, name, section)
 VALUES (gen_random_uuid(), :name, :section)
 
 -- :name list-spaces :? :*
@@ -72,7 +78,7 @@ SELECT s.*
 SELECT * FROM spaces
  WHERE id = :id
 
--- :name delete-room! :! :n
+-- :name delete-space! :! :n
 -- :doc deletes a parking space record given the id
 DELETE FROM spaces
  WHERE id = :id

@@ -1,6 +1,6 @@
 # Park
 
-A web application for allowing sharing of parking spaces by
+A web application supporting the sharing of parking spaces by
 residents of a building.
 
 In my setup, relies on Apache to terminate SSL using a
