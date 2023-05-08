@@ -7,7 +7,8 @@
    [park.layout :as layout]))
 
 (defn login-page [request]
-  (layout/render request "login.html" (select-keys request [:admin?])))
+  (layout/render request "login.html" (merge {:html-class "building"}
+                                             (select-keys request [:admin?]))))
 
 (defn login-authenticate
   "Check request username and password against authdata
@@ -29,7 +30,8 @@
         (db/update-user-login-timestamp! user)
         (-> (redirect next-url)
             (assoc :session updated-session)))
-      (layout/render request "login.html" {:error "Unrecognized Email or Password."}))))
+      (layout/render request "login.html" {:error      "Unrecognized Email or Password."
+                                           :html-class "building"}))))
 
 
 (defn logout [_request]

@@ -142,3 +142,13 @@ input:checked + .toggle:before {
   background: #04AA6D;
   cursor: pointer;
 }
+.building {
+    background: url("https://d22vjwe5tlkwmh.cloudfront.net/park/Entrance.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.fade {
+    background-color: rgba(255, 255, 255, 0.4);
+}
