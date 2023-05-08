@@ -70,8 +70,8 @@ SELECT * FROM spaces
 SELECT s.*
   FROM spaces s
   INNER JOIN users_spaces us on us.space = s.id
- WHERE ur.user = :user
- ORDER BY r.name
+ WHERE us.user = :user
+ ORDER BY s.name
 
 -- :name get-space :? :1
 -- :doc retrieves a parking space record given the id
